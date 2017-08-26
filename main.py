@@ -16,7 +16,7 @@ for collegeid in range(1, 15):
         data = json.loads(res.text)["Data"]
         souped = beautifulsoup.BeautifulSoup(data)
 
-        if souped.find("thead") is None:
+        if souped.find("thead") is None:  # if empty result was returned
             endofpages = True
             break
 
